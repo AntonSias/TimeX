@@ -1,0 +1,47 @@
+{
+  "project_info": {
+    "project_number": "196250020312",
+    "project_id": "timex-26f43",
+    "storage_bucket": "timex-26f43.appspot.com"
+  },
+  "client": [
+    {
+      "client_info": {
+        "mobilesdk_app_id": "1:196250020312:android:e029c88a94c9c18c342aad",
+        "android_client_info": {
+          "package_name": "com.anton.timexgoogle"
+        }
+      },
+      "oauth_client": [
+        {
+          "client_id": "196250020312-5irt55guaqj1m75vf59s56rt0d1jc9ul.apps.googleusercontent.com",
+          "client_type": 1,
+          "android_info": {
+            "package_name": "com.anton.timexgoogle",
+            "certificate_hash": "e60a4b931e9993d02c04e787377bc567beb1e850"
+          }
+        },
+        {
+          "client_id": "196250020312-dtph90pmrh8rq6ij3el0vpf1a04t9uh6.apps.googleusercontent.com",
+          "client_type": 3
+        }
+      ],
+      "api_key": [
+        {
+          "current_key": "AIzaSyBkPx0HXgniLyS5R8kJ3ZhFzrx-6E_Ykxo"
+        }
+      ],
+      "services": {
+        "appinvite_service": {
+          "other_platform_oauth_client": [
+            {
+              "client_id": "196250020312-dtph90pmrh8rq6ij3el0vpf1a04t9uh6.apps.googleusercontent.com",
+              "client_type": 3
+            }
+          ]
+        }
+      }
+    }
+  ],
+  "configuration_version": "1"
+}

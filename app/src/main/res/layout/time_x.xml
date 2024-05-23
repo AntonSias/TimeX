@@ -1,0 +1,225 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    tools:context=".app.TimeX">
+
+<!-- TODO: arreglar para que se vea el logo de la app-->
+
+
+
+
+    <androidx.cardview.widget.CardView
+        android:id="@+id/principal_general"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:backgroundTint="@color/time_gris"
+        app:layout_constraintBottom_toBottomOf="parent">
+
+        <ImageView
+            android:id="@+id/time_loginLogo"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:src="@drawable/vector_logo_132x132"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toTopOf="parent"
+            android:layout_gravity="top|center"
+            android:layout_marginTop="16dp"/>
+
+
+
+
+        <androidx.constraintlayout.widget.ConstraintLayout
+            android:id="@+id/boxTexts"
+            android:layout_width="326dp"
+            android:layout_height="367dp"
+            android:layout_gravity="center"
+            android:layout_marginTop="0dp"
+            android:background="@drawable/rounded_counttime_background"
+            android:padding="20dp">
+
+
+            <TextView
+                android:id="@+id/principal_tvFichaje"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="Fichaje"
+                android:textSize="16dp"
+                android:textStyle="bold"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintTop_toTopOf="parent" />
+
+            <View
+                android:id="@+id/principal_line"
+                android:layout_width="match_parent"
+                android:layout_height="1dp"
+                android:layout_marginTop="8dp"
+                android:background="@color/time_grisOscuro_60saturacion"
+                app:layout_constraintTop_toBottomOf="@+id/principal_tvFichaje" />
+
+            <TextView
+                android:id="@+id/principal_labelDate"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="16dp"
+                android:text="Fecha:"
+                android:textSize="16dp"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintTop_toBottomOf="@id/principal_line" />
+
+            <TextView
+                android:id="@+id/principal_Date"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_margin="16dp"
+                android:textSize="16dp"
+                android:textStyle="bold"
+                app:layout_constraintStart_toEndOf="@+id/principal_labelDate"
+                app:layout_constraintTop_toBottomOf="@id/principal_line"
+                tools:text="24 de Abril de 2024" />
+
+            <TextView
+                android:id="@+id/principal_labelInicio"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="16dp"
+                android:text="Inicio:"
+                android:textSize="16dp"
+                app:layout_constraintStart_toStartOf="@id/principal_Date"
+                app:layout_constraintTop_toBottomOf="@+id/principal_Date" />
+
+            <TextView
+                android:id="@+id/principal_Inicio"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_margin="16dp"
+                android:textSize="16dp"
+                android:textStyle="bold"
+                app:layout_constraintStart_toEndOf="@id/principal_labelInicio"
+                app:layout_constraintTop_toBottomOf="@id/principal_Date"
+                tools:text="08:00" />
+
+            <TextView
+                android:id="@+id/principal_labelFin"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="16dp"
+                android:text="Fin:"
+                android:textSize="16dp"
+                app:layout_constraintStart_toStartOf="@id/principal_labelInicio"
+                app:layout_constraintTop_toBottomOf="@+id/principal_labelInicio" />
+
+            <TextView
+                android:id="@+id/principal_Fin"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="16dp"
+                android:textSize="16dp"
+                android:textStyle="bold"
+                app:layout_constraintStart_toStartOf="@id/principal_Inicio"
+                app:layout_constraintTop_toBottomOf="@id/principal_Inicio"
+                tools:text="--:--" />
+
+            <TextView
+                android:id="@+id/principal_LabelTotal"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="16dp"
+                android:text="Total jornada:"
+                android:textSize="16dp"
+                app:layout_constraintStart_toStartOf="@id/principal_labelDate"
+                app:layout_constraintTop_toBottomOf="@id/principal_labelFin" />
+
+            <TextView
+                android:id="@+id/principal_Total"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginStart="16dp"
+                android:textSize="16dp"
+                android:textStyle="bold"
+                app:layout_constraintStart_toEndOf="@id/principal_LabelTotal"
+                app:layout_constraintTop_toTopOf="@id/principal_LabelTotal"
+                tools:text="00:00:00" />
+
+            <TextView
+                android:id="@+id/principal_labelDescanso"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="16dp"
+                android:text="Total descanso:"
+                android:textSize="16dp"
+                app:layout_constraintStart_toStartOf="@id/principal_LabelTotal"
+                app:layout_constraintTop_toBottomOf="@id/principal_LabelTotal" />
+
+            <TextView
+                android:id="@+id/principal_Descanso"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginStart="16dp"
+                android:textSize="16dp"
+                android:textStyle="bold"
+                app:layout_constraintStart_toEndOf="@+id/principal_labelDescanso"
+                app:layout_constraintTop_toTopOf="@id/principal_labelDescanso"
+                tools:text="00:00:00" />
+
+            <com.google.android.material.floatingactionbutton.FloatingActionButton
+                android:id="@+id/principal_btnPlayPause"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginStart="44dp"
+                android:backgroundTint="@color/time_background"
+                android:src="@drawable/icono_play"
+                app:layout_constraintBottom_toBottomOf="parent"
+                app:layout_constraintStart_toStartOf="parent"
+                app:tint="@color/time_gris" />
+
+            <com.google.android.material.floatingactionbutton.FloatingActionButton
+                android:id="@+id/principal_btnRest"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginEnd="44dp"
+                android:backgroundTint="@color/time_background"
+                android:src="@drawable/icono_pausa"
+                app:layout_constraintBottom_toBottomOf="parent"
+                app:layout_constraintEnd_toEndOf="parent"
+                app:tint="@color/time_gris" />
+        </androidx.constraintlayout.widget.ConstraintLayout>
+
+        <com.google.android.material.floatingactionbutton.FloatingActionButton
+            android:id="@+id/principal_btnHistorial"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginEnd="44dp"
+            android:backgroundTint="@color/time_background"
+            android:src="@drawable/historial"
+            app:maxImageSize="32dp"
+            app:layout_constraintBottom_toBottomOf="parent"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:tint="@color/time_gris"
+            android:layout_gravity="end|bottom"
+            android:layout_marginBottom="100dp"/>
+
+
+    </androidx.cardview.widget.CardView>
+
+
+    <!-- TODO:cambiar el color de los iconos seleccionados-->
+    <com.google.android.material.bottomnavigation.BottomNavigationView
+        android:id="@+id/bottom_navigation"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_gravity="bottom"
+        app:menu="@menu/bottom_nav_menu"
+        app:itemIconTint="@color/white"
+        app:itemTextColor="@color/time_background"
+        app:itemBackground="@color/time_background"
+        app:labelVisibilityMode="labeled"
+        app:backgroundTint="@color/time_background"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintEnd_toEndOf="parent" />
+
+</androidx.constraintlayout.widget.ConstraintLayout>

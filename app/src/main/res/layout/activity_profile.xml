@@ -1,0 +1,158 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    tools:context=".app.ProfileActivity"
+    android:background="@color/time_gris">
+
+    <de.hdodenhof.circleimageview.CircleImageView
+        android:id="@+id/userImage"
+        android:layout_width="140dp"
+        android:layout_height="140dp"
+        android:layout_marginTop="60dp"
+        android:src="@mipmap/ic_launcher_round"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent" />
+
+    <androidx.constraintlayout.widget.ConstraintLayout
+        android:id="@+id/userProfile_header"
+        android:layout_width="326dp"
+        android:layout_height="100dp"
+        android:layout_marginTop="32dp"
+        android:background="@drawable/rounded_background_top"
+        android:backgroundTint="@color/time_background"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@id/userImage">
+
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:fontFamily="@font/lemon_regular"
+            android:text="Perfil usuario"
+            android:textColor="@color/time_gris"
+            app:layout_constraintBottom_toBottomOf="parent"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toTopOf="parent" />
+
+
+    </androidx.constraintlayout.widget.ConstraintLayout>
+
+    <androidx.constraintlayout.widget.ConstraintLayout
+        android:layout_width="326dp"
+        android:layout_height="wrap_content"
+        android:background="@drawable/rounded_background_bottom"
+        android:padding="16dp"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/userProfile_header">
+
+        <TextView
+            android:id="@+id/userProfile_tvUserName"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:fontFamily="@font/lemon_regular"
+            android:text="Nombre usuario"
+            android:textColor="@color/time_grisOscuro_60saturacion"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toTopOf="parent" />
+
+        <TextView
+            android:id="@+id/userProfile_UserName"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginStart="16dp"
+            android:fontFamily="@font/lemon_regular"
+            app:layout_constraintStart_toEndOf="@+id/userProfile_tvUserName"
+            app:layout_constraintTop_toTopOf="parent"
+            tools:text="antonMC" />
+
+        <TextView
+            android:id="@+id/userProfile_tvEmail"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="16dp"
+            android:fontFamily="@font/lemon_regular"
+            android:text="Email"
+            android:textColor="@color/time_grisOscuro_60saturacion"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toBottomOf="@+id/userProfile_tvUserName" />
+
+        <TextView
+            android:id="@+id/userProfile_Email"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginStart="16dp"
+            android:layout_marginTop="16dp"
+            android:fontFamily="@font/lemon_regular"
+            app:layout_constraintStart_toEndOf="@+id/userProfile_tvEmail"
+            app:layout_constraintTop_toBottomOf="@+id/userProfile_UserName"
+            tools:text="antonmesias@gmail.com" />
+        <TextView
+            android:id="@+id/userProfile_tvLogIn"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="16dp"
+            android:fontFamily="@font/lemon_regular"
+            android:text="Log in"
+            android:textColor="@color/time_grisOscuro_60saturacion"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toBottomOf="@+id/userProfile_tvEmail" />
+
+        <TextView
+            android:id="@+id/userProfile_LogIn"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginStart="16dp"
+            android:layout_marginTop="16dp"
+            android:fontFamily="@font/lemon_regular"
+            app:layout_constraintStart_toEndOf="@+id/userProfile_tvLogIn"
+            app:layout_constraintTop_toBottomOf="@+id/userProfile_Email"
+            tools:text="google/correo" />
+
+
+
+
+
+
+    </androidx.constraintlayout.widget.ConstraintLayout>
+
+    <com.google.android.material.floatingactionbutton.FloatingActionButton
+        android:id="@+id/principal_btnLogOut"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginEnd="44dp"
+        android:layout_marginBottom="44dp"
+        android:backgroundTint="@color/time_background"
+        android:src="@drawable/log_out_72"
+        app:layout_constraintBottom_toTopOf="@id/bottom_navigation"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:tint="@color/time_gris"
+        app:maxImageSize="32dp"
+        android:scaleType="centerInside"/>
+
+    <!-- TODO:cambiar el color de los iconos seleccionados-->
+    <com.google.android.material.bottomnavigation.BottomNavigationView
+        android:id="@+id/bottom_navigation"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_gravity="bottom"
+        app:menu="@menu/bottom_nav_menu"
+        app:itemIconTint="@color/white"
+        app:itemTextColor="@color/time_background"
+        app:itemBackground="@color/time_background"
+        app:labelVisibilityMode="labeled"
+        app:backgroundTint="@color/time_background"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintEnd_toEndOf="parent" />
+
+
+
+
+
+</androidx.constraintlayout.widget.ConstraintLayout>
